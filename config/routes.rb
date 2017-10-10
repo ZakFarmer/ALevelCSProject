@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :posts
   # Define index as the root URL
   root 'pages#index'
 
