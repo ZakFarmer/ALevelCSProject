@@ -25,6 +25,8 @@ gem 'bootstrap', '~> 4.0.0.beta'
 
 gem 'sprockets-rails'
 
+gem 'font-awesome-rails'
+
 gem 'jquery-rails'
 
 # Use CoffeeScript for .coffee assets and views

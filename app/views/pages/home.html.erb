@@ -7,10 +7,25 @@
     </div>
   </div>
   <div class="col-6">
+    <%= render 'components/post_form' %>
     <% for @p in @posts %>
-    <div class="card">
-      <div class="card-block">
-        <p><%= @p.content %></p>
+    <div class="card post-panel">
+      <div class="card-block row">
+        <div class="col-sm-1">
+          <img src="/avatar.png" class="rounded-img" height="50px" width="50px"></img>
+        </div>
+        <div class="col-sm-11">
+          <p class="post-title"><span class="post-owner"><a href="/user/<%= User.find(@p.user_id).username %>"><%= User.find(@p.user_id).username %></a></span> - <span class="post-creation"><%= @p.created_at.to_formatted_s(:short) %></span></p>
+          <p class="post-content"><%= @p.content %></p>
+        </div>
+        <div class="col-sm-12">
+          <p class="post-links">
+            <span class="fa fa-reply g-links" aria-hidden="true"></span>
+            <span class="fa fa-heart g-links" aria-hidden="true"></span>
+            <span class="fa fa-ellipsis-h g-links" aria-hidden="true"></span>
+
+          </p>
+        </div>
       </div>
     </div>
     <% end %>
