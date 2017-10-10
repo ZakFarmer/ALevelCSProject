@@ -19,7 +19,7 @@
         <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "nav-link") %>
       </ul>
       <span class="navbar-text">
-        <b>Welcome</b>, <%= current_user.email %>!
+        <b>Welcome</b>, <%= current_user.username %>!
       </span>
     </div>
   </nav>
