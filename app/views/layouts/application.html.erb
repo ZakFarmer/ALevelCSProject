@@ -10,6 +10,16 @@
 
   <body>
     <%= render '/layouts/nav' %>
+    <% if params[:id] != nil %>
+      <% @url = '/user/' + params[:id] %>
+      <% if current_page?(@url) %>
+        <img src="/banner.jpeg" class="profile-banner">
+        <div class="row">
+          <div class="col-sm-4" style="background-color: white;">&nbsp;</div>
+          <div class="col-sm-8" style="background-color:white; text-align: right;"><%= link_to('Edit Profile', edit_user_registration_path, class: "btn btn-primary") %></div>
+        </div>
+      <% end %>
+    <% end %>
     <div class="container">
       <span class="notice"><%= notice %></span>
       <span class="alert"><%= alert %></span>
