@@ -23,6 +23,9 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'bootstrap', '~> 4.0.0.beta'
 
+# Use CarrierWave for avatar uploading
+gem 'carrierwave', '~> 1.0'
+
 gem 'sprockets-rails'
 
 gem 'font-awesome-rails'
